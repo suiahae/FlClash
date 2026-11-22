@@ -384,6 +384,47 @@ abstract class CoreHandlerInterface {
     );
   }
 
+  Future<void> applyTailscale(List<Map<String, Object?>> networks) {
+    return _command(
+      CoreMethod.tailscaleApply,
+      arguments: {'networks': networks},
+    );
+  }
+
+  Future<List<TailscaleNetworkStatus>> getTailscaleStatus() {
+    return _query(CoreMethod.tailscaleStatus, (data) {
+      final networks = _json(data)['networks'];
+      if (networks is! List) {
+        return const <TailscaleNetworkStatus>[];
+      }
+      return [
+        for (final item in networks)
+          TailscaleNetworkStatus.fromJson(_json(item)),
+      ];
+    });
+  }
+
+  Future<void> loginTailscale(String id) {
+    return _command(CoreMethod.tailscaleLogin, arguments: {'id': id});
+  }
+
+  Future<void> logoutTailscale(String id) {
+    return _command(CoreMethod.tailscaleLogout, arguments: {'id': id});
+  }
+
+  Future<void> forgetTailscale(String id) {
+    return _command(CoreMethod.tailscaleForget, arguments: {'id': id});
+  }
+
+  Future<TailscaleCheck> checkTailscale(String id) {
+    return _query(
+      CoreMethod.tailscaleCheck,
+      _model(TailscaleCheck.fromJson),
+      arguments: {'id': id},
+      timeout: coreGuardFor(tailscaleCheckTimeout.inMilliseconds),
+    );
+  }
+
   Future<MitmCertificate?> getMitmCertificate() {
     return _find(CoreMethod.mitmCertificate, _model(MitmCertificate.fromJson));
   }

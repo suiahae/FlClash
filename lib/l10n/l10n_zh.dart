@@ -3731,4 +3731,248 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get vpnServiceStartFailed => 'VPN 服务无法启动。';
+
+  @override
+  String get tailscale => 'Tailscale';
+
+  @override
+  String get tailscaleNetworks => '网络';
+
+  @override
+  String get tailscaleAddNetwork => '添加网络';
+
+  @override
+  String get tailscaleEmptyTitle => '没有 Tailscale 网络';
+
+  @override
+  String get tailscaleEmptyDesc =>
+      '添加一个 tailnet，让它的流量经由核心转发。每个网络使用自己的账号或授权密钥登录。';
+
+  @override
+  String get tailscaleNetworkName => '网络名称';
+
+  @override
+  String get tailscaleNameInvalid => '名称不能为空';
+
+  @override
+  String get tailscaleNameInUse => '已有其他网络使用这个名称';
+
+  @override
+  String get tailscaleHostname => '设备名称';
+
+  @override
+  String get tailscaleHostnameInvalid => '只能使用字母、数字和连字符，且首尾不能是连字符';
+
+  @override
+  String get tailscaleControlUrl => '控制服务器地址';
+
+  @override
+  String get tailscaleControlUrlHint =>
+      '使用 Tailscale 时留空；Headscale 用户填写自己的服务器地址。';
+
+  @override
+  String get tailscaleControlUrlInvalid => '请输入 http 或 https 地址';
+
+  @override
+  String get tailscaleLoginMethod => '登录方式';
+
+  @override
+  String get tailscaleAuthKey => '授权密钥';
+
+  @override
+  String get tailscaleInteractiveLogin => '浏览器登录';
+
+  @override
+  String get tailscaleEnterAuthKey => '输入授权密钥';
+
+  @override
+  String get tailscaleAuthKeyInvalid => '授权密钥被拒绝';
+
+  @override
+  String get tailscaleAuthKeySaved => '已保存密钥';
+
+  @override
+  String get tailscaleKeyExpired => '授权密钥会过期，请重新输入新密钥登录。';
+
+  @override
+  String get tailscaleLoginHint => '浏览器登录会打开 Tailscale 登录页；授权密钥则无需离开应用即可登录。';
+
+  @override
+  String get tailscaleLoginFooter => '授权密钥和设备身份只保存在本机，不会写入备份。';
+
+  @override
+  String get tailscaleLoginWaiting => '正在等待登录完成';
+
+  @override
+  String get tailscaleLoginTimeout => '登录没有完成，请重新打开登录页。';
+
+  @override
+  String get tailscaleOpenLoginPage => '打开登录页';
+
+  @override
+  String get tailscaleSigningIn => '正在登录';
+
+  @override
+  String get tailscaleStatus => '状态';
+
+  @override
+  String get tailscaleConnection => '连接状态';
+
+  @override
+  String get tailscaleConnected => '已连接';
+
+  @override
+  String get tailscaleConnecting => '正在连接';
+
+  @override
+  String get tailscaleStopped => '已停止';
+
+  @override
+  String get tailscaleNeedsLogin => '需要登录';
+
+  @override
+  String get tailscaleNeedsApproval => '需要批准';
+
+  @override
+  String get tailscaleOffline => '离线';
+
+  @override
+  String get tailscaleOnline => '在线';
+
+  @override
+  String get tailscaleNotApplied => '未应用';
+
+  @override
+  String get tailscaleUnavailable => '不可用';
+
+  @override
+  String get tailscaleUnavailableHint => '核心运行后才能使用 Tailscale';
+
+  @override
+  String get tailscaleThisDevice => '本机设备';
+
+  @override
+  String get tailscaleAccount => '账号';
+
+  @override
+  String get tailscaleTailnet => 'Tailnet';
+
+  @override
+  String get tailscaleDevices => '设备';
+
+  @override
+  String get tailscaleDirect => '直连';
+
+  @override
+  String get tailscaleRelay => '中继';
+
+  @override
+  String get tailscaleExitNode => '出口节点';
+
+  @override
+  String get tailscaleExitNodeNone => '不使用';
+
+  @override
+  String get tailscaleExitNodeAuto => '自动';
+
+  @override
+  String get tailscaleExitNodeHint =>
+      '进入 tailnet 的流量从出口节点离开；自动会选择 tailnet 建议的节点。';
+
+  @override
+  String get tailscaleAcceptRoutes => '接受子网路由';
+
+  @override
+  String get tailscaleAutoRouteDesc => '同时把其他设备通告的子网路由接入这个网络。';
+
+  @override
+  String get tailscaleExitNodeAllowLan => '允许出口节点访问本地网络';
+
+  @override
+  String get tailscaleSaveAndLogin => '保存并登录';
+
+  @override
+  String get tailscaleLogout => '退出登录';
+
+  @override
+  String get tailscaleLogoutConfirm => '退出这个网络？配置会保留，但设备身份和已保存的密钥会被删除。';
+
+  @override
+  String get tailscaleRemoveNetwork => '删除网络';
+
+  @override
+  String tailscaleRemoveConfirm(Object name) {
+    return '删除网络 $name？应用会忘记它的登录信息。';
+  }
+
+  @override
+  String get tailscaleCheckSettings => '检查设置';
+
+  @override
+  String get tailscaleAdvanced => '高级';
+
+  @override
+  String get tailscaleGuide => '使用说明';
+
+  @override
+  String get tailscaleGuideGetStarted => '开始使用';
+
+  @override
+  String get tailscaleGuideGetStartedBody =>
+      '在 Tailscale 管理后台创建 tailnet，或自行搭建 Headscale，然后在这里添加网络。核心运行时，这个网络的设备会成为代理的出口。';
+
+  @override
+  String get tailscaleGuideSignIn => '登录';
+
+  @override
+  String get tailscaleGuideSignInBody =>
+      '授权密钥适合无人值守的设备；浏览器登录会打开登录页，完成后自动关闭。设备首次加入时可能需要在管理后台批准。';
+
+  @override
+  String get tailscaleGuideDevices => '设备与路由';
+
+  @override
+  String get tailscaleGuideDevicesBody =>
+      '设备列表显示在线状态，以及连接是直连还是中继。接受子网路由后，其他设备通告的子网也会经由这个网络访问。';
+
+  @override
+  String get tailscaleGuideExitNodes => '出口节点';
+
+  @override
+  String get tailscaleGuideExitNodesBody =>
+      '选择出口节点后，进入 tailnet 的流量从它离开。需要访问出口节点所在局域网时，打开对应的开关。';
+
+  @override
+  String get tailscaleGuideTroubleshooting => '排查问题';
+
+  @override
+  String get tailscaleGuideTroubleshootingBody =>
+      '一直停在「需要登录」时，检查授权密钥是否过期，或重新打开登录页。一直连不上时，检查控制服务器地址和网络，也可以点「检查设置」查看当前状态。';
+
+  @override
+  String tailscaleCheckHealthy(Object delay) {
+    return '网络在 $delay 毫秒内响应';
+  }
+
+  @override
+  String get tailscaleCheckNotApplied => '这个网络还没有运行';
+
+  @override
+  String get tailscaleCheckUnavailable => '无法连接这个网络';
+
+  @override
+  String get tailscaleCheckOffline => '网络已连接，但处于离线状态';
+
+  @override
+  String get tailscaleCheckExitNodeUnset => '尚未选择出口节点';
+
+  @override
+  String get tailscaleCheckNeedsLogin => '请先登录这个网络';
+
+  @override
+  String get tailscaleCheckNeedsApproval => '设备正在等待管理后台批准';
+
+  @override
+  String get tailscaleCredentialsFooter =>
+      '每个网络单独登录。授权密钥无需浏览器；设备首次加入 tailnet 前可能需要在管理后台批准。';
 }

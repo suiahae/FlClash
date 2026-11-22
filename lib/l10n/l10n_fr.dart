@@ -4007,4 +4007,260 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get vpnServiceStartFailed => 'Le service VPN n\'a pas pu démarrer.';
+
+  @override
+  String get tailscale => 'Tailscale';
+
+  @override
+  String get tailscaleNetworks => 'Réseaux';
+
+  @override
+  String get tailscaleAddNetwork => 'Ajouter un réseau';
+
+  @override
+  String get tailscaleEmptyTitle => 'Aucun réseau Tailscale';
+
+  @override
+  String get tailscaleEmptyDesc =>
+      'Ajoutez un tailnet pour router son trafic via le cœur. Chaque réseau se connecte avec son propre compte ou sa clé d\'authentification.';
+
+  @override
+  String get tailscaleNetworkName => 'Nom du réseau';
+
+  @override
+  String get tailscaleNameInvalid => 'Le nom ne peut pas être vide';
+
+  @override
+  String get tailscaleNameInUse => 'Un autre réseau utilise déjà ce nom';
+
+  @override
+  String get tailscaleHostname => 'Nom de l\'appareil';
+
+  @override
+  String get tailscaleHostnameInvalid =>
+      'Utilisez uniquement des lettres, des chiffres et des traits d\'union, pas aux extrémités';
+
+  @override
+  String get tailscaleControlUrl => 'URL de contrôle';
+
+  @override
+  String get tailscaleControlUrlHint =>
+      'Laissez vide pour Tailscale. Les utilisateurs de Headscale saisissent l\'URL de leur serveur.';
+
+  @override
+  String get tailscaleControlUrlInvalid => 'Saisissez une URL http ou https';
+
+  @override
+  String get tailscaleLoginMethod => 'Méthode de connexion';
+
+  @override
+  String get tailscaleAuthKey => 'Clé d\'authentification';
+
+  @override
+  String get tailscaleInteractiveLogin => 'Connexion par navigateur';
+
+  @override
+  String get tailscaleEnterAuthKey => 'Saisir une clé d\'authentification';
+
+  @override
+  String get tailscaleAuthKeyInvalid =>
+      'La clé d\'authentification a été refusée';
+
+  @override
+  String get tailscaleAuthKeySaved => 'Une clé est enregistrée';
+
+  @override
+  String get tailscaleKeyExpired =>
+      'Une clé d\'authentification expire. Saisissez-en une nouvelle pour vous reconnecter.';
+
+  @override
+  String get tailscaleLoginHint =>
+      'La connexion par navigateur ouvre la page de connexion Tailscale. Une clé d\'authentification connecte sans quitter l\'application.';
+
+  @override
+  String get tailscaleLoginFooter =>
+      'La clé d\'authentification et l\'identité de l\'appareil restent sur cet appareil et ne sont pas incluses dans une sauvegarde.';
+
+  @override
+  String get tailscaleLoginWaiting => 'En attente de la fin de la connexion';
+
+  @override
+  String get tailscaleLoginTimeout =>
+      'La connexion ne s\'est pas terminée. Ouvrez à nouveau la page.';
+
+  @override
+  String get tailscaleOpenLoginPage => 'Ouvrir la page de connexion';
+
+  @override
+  String get tailscaleSigningIn => 'Connexion en cours';
+
+  @override
+  String get tailscaleStatus => 'État';
+
+  @override
+  String get tailscaleConnection => 'Connexion';
+
+  @override
+  String get tailscaleConnected => 'Connecté';
+
+  @override
+  String get tailscaleConnecting => 'Connexion';
+
+  @override
+  String get tailscaleStopped => 'Arrêté';
+
+  @override
+  String get tailscaleNeedsLogin => 'Connexion requise';
+
+  @override
+  String get tailscaleNeedsApproval => 'Approbation requise';
+
+  @override
+  String get tailscaleOffline => 'Hors ligne';
+
+  @override
+  String get tailscaleOnline => 'En ligne';
+
+  @override
+  String get tailscaleNotApplied => 'Non appliqué';
+
+  @override
+  String get tailscaleUnavailable => 'Indisponible';
+
+  @override
+  String get tailscaleUnavailableHint =>
+      'Tailscale sera disponible une fois le cœur démarré';
+
+  @override
+  String get tailscaleThisDevice => 'Cet appareil';
+
+  @override
+  String get tailscaleAccount => 'Compte';
+
+  @override
+  String get tailscaleTailnet => 'tailnet';
+
+  @override
+  String get tailscaleDevices => 'Appareils';
+
+  @override
+  String get tailscaleDirect => 'Direct';
+
+  @override
+  String get tailscaleRelay => 'Relais';
+
+  @override
+  String get tailscaleExitNode => 'Nœud de sortie';
+
+  @override
+  String get tailscaleExitNodeNone => 'Aucun';
+
+  @override
+  String get tailscaleExitNodeAuto => 'Automatique';
+
+  @override
+  String get tailscaleExitNodeHint =>
+      'Le trafic vers le tailnet sort par le nœud de sortie. Automatique choisit celui que propose le tailnet.';
+
+  @override
+  String get tailscaleAcceptRoutes => 'Accepter les routes de sous-réseaux';
+
+  @override
+  String get tailscaleAutoRouteDesc =>
+      'Router aussi via ce réseau les sous-réseaux annoncés par les autres appareils.';
+
+  @override
+  String get tailscaleExitNodeAllowLan =>
+      'Accès du nœud de sortie au réseau local';
+
+  @override
+  String get tailscaleSaveAndLogin => 'Enregistrer et se connecter';
+
+  @override
+  String get tailscaleLogout => 'Se déconnecter';
+
+  @override
+  String get tailscaleLogoutConfirm =>
+      'Se déconnecter de ce réseau ? Il reste configuré, mais son identité d\'appareil et la clé enregistrée sont supprimées.';
+
+  @override
+  String get tailscaleRemoveNetwork => 'Supprimer le réseau';
+
+  @override
+  String tailscaleRemoveConfirm(Object name) {
+    return 'Supprimer le réseau $name ? L\'application oubliera sa connexion.';
+  }
+
+  @override
+  String get tailscaleCheckSettings => 'Vérifier les réglages';
+
+  @override
+  String get tailscaleAdvanced => 'Avancé';
+
+  @override
+  String get tailscaleGuide => 'Guide';
+
+  @override
+  String get tailscaleGuideGetStarted => 'Premiers pas';
+
+  @override
+  String get tailscaleGuideGetStartedBody =>
+      'Créez un tailnet dans la console Tailscale ou hébergez Headscale, puis ajoutez un réseau ici. Une fois le cœur démarré, les appareils de ce réseau servent de sortie au proxy.';
+
+  @override
+  String get tailscaleGuideSignIn => 'Connexion';
+
+  @override
+  String get tailscaleGuideSignInBody =>
+      'Une clé d\'authentification convient aux appareils sans surveillance. La connexion par navigateur ouvre la page de connexion et se ferme une fois terminée. Lors de sa première jonction, l\'appareil peut devoir être approuvé dans la console.';
+
+  @override
+  String get tailscaleGuideDevices => 'Appareils et routes';
+
+  @override
+  String get tailscaleGuideDevicesBody =>
+      'La liste montre l\'état en ligne et la connexion directe ou relayée. Une fois les routes de sous-réseaux acceptées, les sous-réseaux annoncés par les autres appareils sont aussi accessibles via ce réseau.';
+
+  @override
+  String get tailscaleGuideExitNodes => 'Nœuds de sortie';
+
+  @override
+  String get tailscaleGuideExitNodesBody =>
+      'Après avoir choisi un nœud de sortie, le trafic vers le tailnet en sort. Pour joindre le réseau local du nœud, activez l\'interrupteur correspondant.';
+
+  @override
+  String get tailscaleGuideTroubleshooting => 'Dépannage';
+
+  @override
+  String get tailscaleGuideTroubleshootingBody =>
+      'Si l\'état reste « Connexion requise », vérifiez l\'expiration de la clé ou rouvrez la page de connexion. Sans connexion, vérifiez l\'URL de contrôle et le réseau ; « Vérifier les réglages » affiche l\'état actuel.';
+
+  @override
+  String tailscaleCheckHealthy(Object delay) {
+    return 'Le réseau a répondu en $delay ms';
+  }
+
+  @override
+  String get tailscaleCheckNotApplied => 'Ce réseau ne fonctionne pas encore';
+
+  @override
+  String get tailscaleCheckUnavailable => 'Le réseau est injoignable';
+
+  @override
+  String get tailscaleCheckOffline => 'Le réseau est connecté mais hors ligne';
+
+  @override
+  String get tailscaleCheckExitNodeUnset =>
+      'Aucun nœud de sortie n\'est défini';
+
+  @override
+  String get tailscaleCheckNeedsLogin => 'Connectez-vous d\'abord à ce réseau';
+
+  @override
+  String get tailscaleCheckNeedsApproval =>
+      'L\'appareil attend une approbation dans la console';
+
+  @override
+  String get tailscaleCredentialsFooter =>
+      'Chaque réseau se connecte séparément. Une clé d\'authentification ne nécessite pas de navigateur ; un appareil peut devoir être approuvé dans la console avant sa première jonction.';
 }

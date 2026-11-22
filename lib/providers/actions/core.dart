@@ -74,6 +74,9 @@ class CoreAction extends _$CoreAction {
     if (rsFeature && ref.read(patchClashConfigProvider).mitm.enable) {
       unawaited(ref.read(mitmTrustStateProvider.notifier).refresh());
     }
+    if (ref.read(tailscaleNetworksProvider).isNotEmpty) {
+      await ref.read(tailscaleActionProvider.notifier).push();
+    }
     return true;
   }
 

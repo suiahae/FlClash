@@ -3960,4 +3960,258 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get vpnServiceStartFailed => 'The VPN service could not start.';
+
+  @override
+  String get tailscale => 'Tailscale';
+
+  @override
+  String get tailscaleNetworks => 'Networks';
+
+  @override
+  String get tailscaleAddNetwork => 'Add network';
+
+  @override
+  String get tailscaleEmptyTitle => 'No Tailscale network';
+
+  @override
+  String get tailscaleEmptyDesc =>
+      'Add a tailnet to route its traffic through the core. Each network signs in with its own account or auth key.';
+
+  @override
+  String get tailscaleNetworkName => 'Network name';
+
+  @override
+  String get tailscaleNameInvalid => 'The name cannot be empty';
+
+  @override
+  String get tailscaleNameInUse => 'Another network already uses this name';
+
+  @override
+  String get tailscaleHostname => 'Device name';
+
+  @override
+  String get tailscaleHostnameInvalid =>
+      'Use letters, digits and hyphens only, and no hyphen at either end';
+
+  @override
+  String get tailscaleControlUrl => 'Control URL';
+
+  @override
+  String get tailscaleControlUrlHint =>
+      'Leave it empty for Tailscale. Headscale users enter their server URL.';
+
+  @override
+  String get tailscaleControlUrlInvalid => 'Enter an http or https URL';
+
+  @override
+  String get tailscaleLoginMethod => 'Sign-in method';
+
+  @override
+  String get tailscaleAuthKey => 'Auth key';
+
+  @override
+  String get tailscaleInteractiveLogin => 'Browser sign-in';
+
+  @override
+  String get tailscaleEnterAuthKey => 'Enter an auth key';
+
+  @override
+  String get tailscaleAuthKeyInvalid => 'The auth key was refused';
+
+  @override
+  String get tailscaleAuthKeySaved => 'A key is saved';
+
+  @override
+  String get tailscaleKeyExpired =>
+      'Auth keys expire. Enter a new one to sign in again.';
+
+  @override
+  String get tailscaleLoginHint =>
+      'Browser sign-in opens the Tailscale login page. An auth key signs in without leaving the app.';
+
+  @override
+  String get tailscaleLoginFooter =>
+      'The auth key and the device identity stay on this device and are not included in a backup.';
+
+  @override
+  String get tailscaleLoginWaiting => 'Waiting for sign-in to finish';
+
+  @override
+  String get tailscaleLoginTimeout =>
+      'Sign-in did not finish. Open the page again.';
+
+  @override
+  String get tailscaleOpenLoginPage => 'Open login page';
+
+  @override
+  String get tailscaleSigningIn => 'Signing in';
+
+  @override
+  String get tailscaleStatus => 'Status';
+
+  @override
+  String get tailscaleConnection => 'Connection';
+
+  @override
+  String get tailscaleConnected => 'Connected';
+
+  @override
+  String get tailscaleConnecting => 'Connecting';
+
+  @override
+  String get tailscaleStopped => 'Stopped';
+
+  @override
+  String get tailscaleNeedsLogin => 'Sign-in needed';
+
+  @override
+  String get tailscaleNeedsApproval => 'Approval needed';
+
+  @override
+  String get tailscaleOffline => 'Offline';
+
+  @override
+  String get tailscaleOnline => 'Online';
+
+  @override
+  String get tailscaleNotApplied => 'Not applied';
+
+  @override
+  String get tailscaleUnavailable => 'Unavailable';
+
+  @override
+  String get tailscaleUnavailableHint =>
+      'Tailscale becomes available once the core is running';
+
+  @override
+  String get tailscaleThisDevice => 'This device';
+
+  @override
+  String get tailscaleAccount => 'Account';
+
+  @override
+  String get tailscaleTailnet => 'Tailnet';
+
+  @override
+  String get tailscaleDevices => 'Devices';
+
+  @override
+  String get tailscaleDirect => 'Direct';
+
+  @override
+  String get tailscaleRelay => 'Relay';
+
+  @override
+  String get tailscaleExitNode => 'Exit node';
+
+  @override
+  String get tailscaleExitNodeNone => 'None';
+
+  @override
+  String get tailscaleExitNodeAuto => 'Automatic';
+
+  @override
+  String get tailscaleExitNodeHint =>
+      'Traffic into the tailnet leaves through the exit node. Automatic follows whichever node the tailnet suggests.';
+
+  @override
+  String get tailscaleAcceptRoutes => 'Accept subnet routes';
+
+  @override
+  String get tailscaleAutoRouteDesc =>
+      'Also send the subnets that other devices advertise through this network.';
+
+  @override
+  String get tailscaleExitNodeAllowLan =>
+      'Exit node access to the local network';
+
+  @override
+  String get tailscaleSaveAndLogin => 'Save and sign in';
+
+  @override
+  String get tailscaleLogout => 'Sign out';
+
+  @override
+  String get tailscaleLogoutConfirm =>
+      'Sign out of this network? It stays configured, but its device identity and saved key are removed.';
+
+  @override
+  String get tailscaleRemoveNetwork => 'Remove network';
+
+  @override
+  String tailscaleRemoveConfirm(Object name) {
+    return 'Remove the network $name? The app forgets its sign-in.';
+  }
+
+  @override
+  String get tailscaleCheckSettings => 'Check settings';
+
+  @override
+  String get tailscaleAdvanced => 'Advanced';
+
+  @override
+  String get tailscaleGuide => 'Guide';
+
+  @override
+  String get tailscaleGuideGetStarted => 'Getting started';
+
+  @override
+  String get tailscaleGuideGetStartedBody =>
+      'Create a tailnet in the Tailscale admin console or host Headscale yourself, then add a network here. While the core runs, that network\'s devices become an exit for the proxy.';
+
+  @override
+  String get tailscaleGuideSignIn => 'Signing in';
+
+  @override
+  String get tailscaleGuideSignInBody =>
+      'An auth key suits unattended devices. Browser sign-in opens the login page and closes once it finishes. A device may need approval in the admin console the first time it joins.';
+
+  @override
+  String get tailscaleGuideDevices => 'Devices and routes';
+
+  @override
+  String get tailscaleGuideDevicesBody =>
+      'The device list shows whether each device is online and connects directly or through a relay. With subnet routes accepted, subnets that other devices advertise are reached through this network too.';
+
+  @override
+  String get tailscaleGuideExitNodes => 'Exit nodes';
+
+  @override
+  String get tailscaleGuideExitNodesBody =>
+      'Once an exit node is chosen, traffic into the tailnet leaves through it. To reach the network the exit node sits on, turn on the matching switch.';
+
+  @override
+  String get tailscaleGuideTroubleshooting => 'Troubleshooting';
+
+  @override
+  String get tailscaleGuideTroubleshootingBody =>
+      'If the status stays at sign-in needed, check whether the auth key has expired or open the login page again. If it never connects, check the control URL and the network, and use check settings to see the current state.';
+
+  @override
+  String tailscaleCheckHealthy(Object delay) {
+    return 'The network answered in $delay ms';
+  }
+
+  @override
+  String get tailscaleCheckNotApplied => 'This network is not running yet';
+
+  @override
+  String get tailscaleCheckUnavailable => 'The network could not be reached';
+
+  @override
+  String get tailscaleCheckOffline => 'The network is connected but offline';
+
+  @override
+  String get tailscaleCheckExitNodeUnset => 'No exit node is set';
+
+  @override
+  String get tailscaleCheckNeedsLogin => 'Sign in to this network first';
+
+  @override
+  String get tailscaleCheckNeedsApproval =>
+      'The device is waiting for approval in the admin console';
+
+  @override
+  String get tailscaleCredentialsFooter =>
+      'Each network signs in on its own. An auth key needs no browser; a device may need approval in the admin console before it joins a tailnet.';
 }

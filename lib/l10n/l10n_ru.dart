@@ -3954,4 +3954,258 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get vpnServiceStartFailed => 'Не удалось запустить службу VPN.';
+
+  @override
+  String get tailscale => 'Tailscale';
+
+  @override
+  String get tailscaleNetworks => 'Сети';
+
+  @override
+  String get tailscaleAddNetwork => 'Добавить сеть';
+
+  @override
+  String get tailscaleEmptyTitle => 'Нет сети Tailscale';
+
+  @override
+  String get tailscaleEmptyDesc =>
+      'Добавьте tailnet, и его трафик пойдёт через ядро. Каждая сеть входит в систему под своим аккаунтом или ключом авторизации.';
+
+  @override
+  String get tailscaleNetworkName => 'Имя сети';
+
+  @override
+  String get tailscaleNameInvalid => 'Имя не может быть пустым';
+
+  @override
+  String get tailscaleNameInUse => 'Другая сеть уже использует это имя';
+
+  @override
+  String get tailscaleHostname => 'Имя устройства';
+
+  @override
+  String get tailscaleHostnameInvalid =>
+      'Допустимы буквы, цифры и дефисы, но не по краям';
+
+  @override
+  String get tailscaleControlUrl => 'URL управления';
+
+  @override
+  String get tailscaleControlUrlHint =>
+      'Оставьте пустым для Tailscale. Пользователи Headscale вводят адрес своего сервера.';
+
+  @override
+  String get tailscaleControlUrlInvalid => 'Введите URL http или https';
+
+  @override
+  String get tailscaleLoginMethod => 'Способ входа';
+
+  @override
+  String get tailscaleAuthKey => 'Ключ авторизации';
+
+  @override
+  String get tailscaleInteractiveLogin => 'Вход через браузер';
+
+  @override
+  String get tailscaleEnterAuthKey => 'Введите ключ авторизации';
+
+  @override
+  String get tailscaleAuthKeyInvalid => 'Ключ авторизации отклонён';
+
+  @override
+  String get tailscaleAuthKeySaved => 'Ключ сохранён';
+
+  @override
+  String get tailscaleKeyExpired =>
+      'Срок действия ключа авторизации истекает. Введите новый ключ, чтобы войти снова.';
+
+  @override
+  String get tailscaleLoginHint =>
+      'Вход через браузер открывает страницу входа Tailscale. Ключ авторизации позволяет войти, не покидая приложение.';
+
+  @override
+  String get tailscaleLoginFooter =>
+      'Ключ авторизации и идентификатор устройства остаются на этом устройстве и не попадают в резервную копию.';
+
+  @override
+  String get tailscaleLoginWaiting => 'Ожидание завершения входа';
+
+  @override
+  String get tailscaleLoginTimeout =>
+      'Вход не завершился. Откройте страницу заново.';
+
+  @override
+  String get tailscaleOpenLoginPage => 'Открыть страницу входа';
+
+  @override
+  String get tailscaleSigningIn => 'Выполняется вход';
+
+  @override
+  String get tailscaleStatus => 'Состояние';
+
+  @override
+  String get tailscaleConnection => 'Подключение';
+
+  @override
+  String get tailscaleConnected => 'Подключено';
+
+  @override
+  String get tailscaleConnecting => 'Подключение';
+
+  @override
+  String get tailscaleStopped => 'Остановлено';
+
+  @override
+  String get tailscaleNeedsLogin => 'Нужен вход';
+
+  @override
+  String get tailscaleNeedsApproval => 'Нужно подтверждение';
+
+  @override
+  String get tailscaleOffline => 'Не в сети';
+
+  @override
+  String get tailscaleOnline => 'В сети';
+
+  @override
+  String get tailscaleNotApplied => 'Не применено';
+
+  @override
+  String get tailscaleUnavailable => 'Недоступно';
+
+  @override
+  String get tailscaleUnavailableHint =>
+      'Tailscale станет доступен после запуска ядра';
+
+  @override
+  String get tailscaleThisDevice => 'Это устройство';
+
+  @override
+  String get tailscaleAccount => 'Аккаунт';
+
+  @override
+  String get tailscaleTailnet => 'tailnet';
+
+  @override
+  String get tailscaleDevices => 'Устройства';
+
+  @override
+  String get tailscaleDirect => 'Напрямую';
+
+  @override
+  String get tailscaleRelay => 'Через ретранслятор';
+
+  @override
+  String get tailscaleExitNode => 'Выходной узел';
+
+  @override
+  String get tailscaleExitNodeNone => 'Нет';
+
+  @override
+  String get tailscaleExitNodeAuto => 'Автоматически';
+
+  @override
+  String get tailscaleExitNodeHint =>
+      'Трафик в tailnet выходит через выходной узел. Автоматически выбирается узел, предложенный tailnet.';
+
+  @override
+  String get tailscaleAcceptRoutes => 'Принимать маршруты подсетей';
+
+  @override
+  String get tailscaleAutoRouteDesc =>
+      'Направлять в эту сеть также подсети, объявленные другими устройствами.';
+
+  @override
+  String get tailscaleExitNodeAllowLan =>
+      'Доступ выходного узла к локальной сети';
+
+  @override
+  String get tailscaleSaveAndLogin => 'Сохранить и войти';
+
+  @override
+  String get tailscaleLogout => 'Выйти';
+
+  @override
+  String get tailscaleLogoutConfirm =>
+      'Выйти из этой сети? Настройки сохранятся, но идентификатор устройства и сохранённый ключ будут удалены.';
+
+  @override
+  String get tailscaleRemoveNetwork => 'Удалить сеть';
+
+  @override
+  String tailscaleRemoveConfirm(Object name) {
+    return 'Удалить сеть $name? Данные для входа будут забыты.';
+  }
+
+  @override
+  String get tailscaleCheckSettings => 'Проверить настройки';
+
+  @override
+  String get tailscaleAdvanced => 'Дополнительно';
+
+  @override
+  String get tailscaleGuide => 'Руководство';
+
+  @override
+  String get tailscaleGuideGetStarted => 'Начало работы';
+
+  @override
+  String get tailscaleGuideGetStartedBody =>
+      'Создайте tailnet в консоли Tailscale или разверните Headscale, затем добавьте сеть здесь. Когда ядро запущено, устройства этой сети становятся выходом прокси.';
+
+  @override
+  String get tailscaleGuideSignIn => 'Вход';
+
+  @override
+  String get tailscaleGuideSignInBody =>
+      'Ключ авторизации подходит для устройств без присмотра. Вход через браузер откроет страницу входа и закроется после завершения. При первом подключении устройство может требовать подтверждения в консоли.';
+
+  @override
+  String get tailscaleGuideDevices => 'Устройства и маршруты';
+
+  @override
+  String get tailscaleGuideDevicesBody =>
+      'Список показывает состояние сети и прямое или ретранслируемое соединение. После принятия маршрутов подсетей подсети других устройств также доступны через эту сеть.';
+
+  @override
+  String get tailscaleGuideExitNodes => 'Выходные узлы';
+
+  @override
+  String get tailscaleGuideExitNodesBody =>
+      'После выбора выходного узла трафик в tailnet пойдёт через него. Чтобы попасть в локальную сеть узла, включите соответствующий переключатель.';
+
+  @override
+  String get tailscaleGuideTroubleshooting => 'Устранение неполадок';
+
+  @override
+  String get tailscaleGuideTroubleshootingBody =>
+      'Если состояние остаётся «Нужен вход», проверьте срок действия ключа или откройте страницу входа снова. Если подключения нет, проверьте URL управления и сеть, а «Проверить настройки» покажет текущее состояние.';
+
+  @override
+  String tailscaleCheckHealthy(Object delay) {
+    return 'Сеть ответила за $delay мс';
+  }
+
+  @override
+  String get tailscaleCheckNotApplied => 'Эта сеть ещё не запущена';
+
+  @override
+  String get tailscaleCheckUnavailable => 'Не удалось связаться с сетью';
+
+  @override
+  String get tailscaleCheckOffline => 'Сеть подключена, но не в сети';
+
+  @override
+  String get tailscaleCheckExitNodeUnset => 'Выходной узел не задан';
+
+  @override
+  String get tailscaleCheckNeedsLogin => 'Сначала войдите в эту сеть';
+
+  @override
+  String get tailscaleCheckNeedsApproval =>
+      'Устройство ожидает подтверждения в консоли';
+
+  @override
+  String get tailscaleCredentialsFooter =>
+      'Каждая сеть входит в систему отдельно. Ключ авторизации не требует браузера; перед первым подключением устройство может требовать подтверждения в консоли.';
 }

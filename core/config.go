@@ -18,7 +18,6 @@ import (
 	"github.com/metacubex/mihomo/config"
 	"github.com/metacubex/mihomo/constant"
 	"github.com/metacubex/mihomo/hub"
-	"github.com/metacubex/mihomo/hub/executor"
 	"github.com/metacubex/mihomo/hub/route"
 	authStore "github.com/metacubex/mihomo/listener/auth"
 	LC "github.com/metacubex/mihomo/listener/config"
@@ -109,7 +108,12 @@ func loadConfig(path string) (*config.Config, error) {
 	if err != nil {
 		return nil, err
 	}
-	cfg, err := executor.ParseWithBytes(buf)
+	raw, err := unmarshalRawConfig(buf)
+	if err != nil {
+		return nil, err
+	}
+	injectTailscaleConfig(raw)
+	cfg, err := config.ParseRawConfig(raw)
 	if err != nil {
 		return nil, err
 	}
@@ -160,8 +164,15 @@ func applyConfig(params *SetupParams) error {
 		cfg = fallback
 	}
 
+	previousProxies := tunnel.AllProxies()
 	currentConfig = cfg
 	hub.ApplyConfig(cfg)
+	if err == nil {
+		closeReplacedTailscaleProxies(previousProxies)
+		for _, id := range tailscale.takeRemoved() {
+			removeTailscaleState(id)
+		}
+	}
 	patchSelectGroup(params.SelectedMap)
 	updateListeners(cfg)
 	// After the listeners: a probe sent while the TUN is rebuilt carries the

@@ -135,6 +135,22 @@ class Preferences {
     return preferences?.setString(configKey, json.encode(config)) ?? false;
   }
 
+  Future<String?> getTailscaleAuthKey(String id) async {
+    final preferences = await _store.value;
+    return preferences?.getString('tailscale_auth_key_$id');
+  }
+
+  Future<void> saveTailscaleAuthKey(String id, String? authKey) async {
+    final preferences = await _store.value;
+    final key = 'tailscale_auth_key_$id';
+    final value = authKey?.trim() ?? '';
+    if (value.isEmpty) {
+      await preferences?.remove(key);
+      return;
+    }
+    await preferences?.setString(key, value);
+  }
+
   Future<SystemDnsRecord?> getSystemDnsRecord() async {
     try {
       final sharedPreferencesIns = await _store.value;

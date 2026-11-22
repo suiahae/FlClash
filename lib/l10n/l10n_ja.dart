@@ -3780,4 +3780,251 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get vpnServiceStartFailed => 'VPN サービスを起動できませんでした。';
+
+  @override
+  String get tailscale => 'Tailscale';
+
+  @override
+  String get tailscaleNetworks => 'ネットワーク';
+
+  @override
+  String get tailscaleAddNetwork => 'ネットワークを追加';
+
+  @override
+  String get tailscaleEmptyTitle => 'Tailscale ネットワークがありません';
+
+  @override
+  String get tailscaleEmptyDesc =>
+      'tailnet を追加すると、その通信はコア経由で転送されます。各ネットワークは独自のアカウントまたは認証キーでサインインします。';
+
+  @override
+  String get tailscaleNetworkName => 'ネットワーク名';
+
+  @override
+  String get tailscaleNameInvalid => '名前は空にできません';
+
+  @override
+  String get tailscaleNameInUse => 'この名前は別のネットワークで使われています';
+
+  @override
+  String get tailscaleHostname => 'デバイス名';
+
+  @override
+  String get tailscaleHostnameInvalid => '半角英数字とハイフンのみ使用でき、先頭と末尾にハイフンは使えません';
+
+  @override
+  String get tailscaleControlUrl => 'コントロール URL';
+
+  @override
+  String get tailscaleControlUrlHint =>
+      'Tailscale の場合は空欄にします。Headscale の場合はサーバーの URL を入力します。';
+
+  @override
+  String get tailscaleControlUrlInvalid => 'http または https の URL を入力してください';
+
+  @override
+  String get tailscaleLoginMethod => 'サインイン方法';
+
+  @override
+  String get tailscaleAuthKey => '認証キー';
+
+  @override
+  String get tailscaleInteractiveLogin => 'ブラウザーでサインイン';
+
+  @override
+  String get tailscaleEnterAuthKey => '認証キーを入力';
+
+  @override
+  String get tailscaleAuthKeyInvalid => '認証キーが拒否されました';
+
+  @override
+  String get tailscaleAuthKeySaved => 'キーは保存されています';
+
+  @override
+  String get tailscaleKeyExpired => '認証キーには有効期限があります。新しいキーを入力して再度サインインしてください。';
+
+  @override
+  String get tailscaleLoginHint =>
+      'ブラウザーでサインインすると Tailscale のログインページが開きます。認証キーならアプリを離れずにサインインできます。';
+
+  @override
+  String get tailscaleLoginFooter =>
+      '認証キーとデバイス ID はこのデバイスにのみ保存され、バックアップには含まれません。';
+
+  @override
+  String get tailscaleLoginWaiting => 'サインインの完了を待っています';
+
+  @override
+  String get tailscaleLoginTimeout => 'サインインが完了しませんでした。ページをもう一度開いてください。';
+
+  @override
+  String get tailscaleOpenLoginPage => 'ログインページを開く';
+
+  @override
+  String get tailscaleSigningIn => 'サインインしています';
+
+  @override
+  String get tailscaleStatus => '状態';
+
+  @override
+  String get tailscaleConnection => '接続状態';
+
+  @override
+  String get tailscaleConnected => '接続済み';
+
+  @override
+  String get tailscaleConnecting => '接続中';
+
+  @override
+  String get tailscaleStopped => '停止';
+
+  @override
+  String get tailscaleNeedsLogin => 'サインインが必要';
+
+  @override
+  String get tailscaleNeedsApproval => '承認が必要';
+
+  @override
+  String get tailscaleOffline => 'オフライン';
+
+  @override
+  String get tailscaleOnline => 'オンライン';
+
+  @override
+  String get tailscaleNotApplied => '未適用';
+
+  @override
+  String get tailscaleUnavailable => '利用不可';
+
+  @override
+  String get tailscaleUnavailableHint => 'コアが動作すると Tailscale を利用できます';
+
+  @override
+  String get tailscaleThisDevice => 'このデバイス';
+
+  @override
+  String get tailscaleAccount => 'アカウント';
+
+  @override
+  String get tailscaleTailnet => 'tailnet';
+
+  @override
+  String get tailscaleDevices => 'デバイス';
+
+  @override
+  String get tailscaleDirect => '直接接続';
+
+  @override
+  String get tailscaleRelay => 'リレー';
+
+  @override
+  String get tailscaleExitNode => '出口ノード';
+
+  @override
+  String get tailscaleExitNodeNone => 'なし';
+
+  @override
+  String get tailscaleExitNodeAuto => '自動';
+
+  @override
+  String get tailscaleExitNodeHint =>
+      'tailnet 宛ての通信は出口ノードから送信されます。自動では tailnet が推奨するノードを選びます。';
+
+  @override
+  String get tailscaleAcceptRoutes => 'サブネットルートを受け入れる';
+
+  @override
+  String get tailscaleAutoRouteDesc => '他のデバイスが広告するサブネットへの通信もこのネットワーク経由にします。';
+
+  @override
+  String get tailscaleExitNodeAllowLan => '出口ノードのローカルネットワークアクセス';
+
+  @override
+  String get tailscaleSaveAndLogin => '保存してサインイン';
+
+  @override
+  String get tailscaleLogout => 'サインアウト';
+
+  @override
+  String get tailscaleLogoutConfirm =>
+      'このネットワークからサインアウトしますか？設定は残りますが、デバイス ID と保存されたキーは削除されます。';
+
+  @override
+  String get tailscaleRemoveNetwork => 'ネットワークを削除';
+
+  @override
+  String tailscaleRemoveConfirm(Object name) {
+    return 'ネットワーク $name を削除しますか？サインイン情報は破棄されます。';
+  }
+
+  @override
+  String get tailscaleCheckSettings => '設定を確認';
+
+  @override
+  String get tailscaleAdvanced => '詳細設定';
+
+  @override
+  String get tailscaleGuide => 'ガイド';
+
+  @override
+  String get tailscaleGuideGetStarted => 'はじめに';
+
+  @override
+  String get tailscaleGuideGetStartedBody =>
+      'Tailscale の管理画面で tailnet を作成するか Headscale を自前で用意し、ここにネットワークを追加します。コアが動作すると、そのネットワークのデバイスがプロキシの出口になります。';
+
+  @override
+  String get tailscaleGuideSignIn => 'サインイン';
+
+  @override
+  String get tailscaleGuideSignInBody =>
+      '認証キーは無人で運用するデバイスに適しています。ブラウザーでのサインインはログインページを開き、完了すると自動的に閉じます。デバイスが初めて参加するときは管理画面での承認が必要な場合があります。';
+
+  @override
+  String get tailscaleGuideDevices => 'デバイスとルート';
+
+  @override
+  String get tailscaleGuideDevicesBody =>
+      'デバイス一覧にはオンライン状態と、直接接続かリレー経由かが表示されます。サブネットルートを受け入れると、他のデバイスが広告するサブネットにもこのネットワーク経由でアクセスできます。';
+
+  @override
+  String get tailscaleGuideExitNodes => '出口ノード';
+
+  @override
+  String get tailscaleGuideExitNodesBody =>
+      '出口ノードを選ぶと、tailnet 宛ての通信はそこから送信されます。出口ノード側の LAN にアクセスするには、対応するスイッチをオンにします。';
+
+  @override
+  String get tailscaleGuideTroubleshooting => 'トラブルシューティング';
+
+  @override
+  String get tailscaleGuideTroubleshootingBody =>
+      '「サインインが必要」のままの場合は、認証キーの有効期限を確認するか、ログインページを開き直してください。接続できない場合は、コントロール URL とネットワークを確認し、「設定を確認」で現在の状態を表示できます。';
+
+  @override
+  String tailscaleCheckHealthy(Object delay) {
+    return 'ネットワークは $delay ミリ秒で応答しました';
+  }
+
+  @override
+  String get tailscaleCheckNotApplied => 'このネットワークはまだ動作していません';
+
+  @override
+  String get tailscaleCheckUnavailable => 'このネットワークに接続できません';
+
+  @override
+  String get tailscaleCheckOffline => 'ネットワークは接続されていますがオフラインです';
+
+  @override
+  String get tailscaleCheckExitNodeUnset => '出口ノードが設定されていません';
+
+  @override
+  String get tailscaleCheckNeedsLogin => '先にこのネットワークにサインインしてください';
+
+  @override
+  String get tailscaleCheckNeedsApproval => 'デバイスは管理画面での承認を待っています';
+
+  @override
+  String get tailscaleCredentialsFooter =>
+      '各ネットワークは個別にサインインします。認証キーならブラウザーは不要です。デバイスが初めて tailnet に参加する前に管理画面での承認が必要な場合があります。';
 }

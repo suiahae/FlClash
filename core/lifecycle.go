@@ -30,6 +30,7 @@ func handleInit(params *InitParams) error {
 	defer configMu.Unlock()
 	sdkVersion.Store(int32(params.Version))
 	constant.SetHomeDir(params.HomeDir)
+	tailscale.load()
 	initOwnership(params.HomeDir)
 	clearSpilledResponses()
 	isInit.Store(true)

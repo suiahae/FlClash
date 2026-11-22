@@ -90,6 +90,9 @@ const downloadTimeoutDuration = Duration(seconds: 20);
 /// A healthy source answers within a second; past this the outbound is down.
 const outboundIpTimeoutDuration = Duration(seconds: 6);
 
+/// Kept in step with tailscaleCheckTimeout in core/tailscale.go.
+const tailscaleCheckTimeout = Duration(seconds: 10);
+
 /// The Core may spend a method's own timeout twice, once queueing for a probe
 /// slot and once on the request, before the transport is considered
 /// unresponsive. [budgetFactor] covers methods that spend it more than once.

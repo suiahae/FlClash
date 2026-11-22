@@ -6947,6 +6947,468 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'The VPN service could not start.'**
   String get vpnServiceStartFailed;
+
+  /// No description provided for @tailscale.
+  ///
+  /// In en, this message translates to:
+  /// **'Tailscale'**
+  String get tailscale;
+
+  /// No description provided for @tailscaleNetworks.
+  ///
+  /// In en, this message translates to:
+  /// **'Networks'**
+  String get tailscaleNetworks;
+
+  /// No description provided for @tailscaleAddNetwork.
+  ///
+  /// In en, this message translates to:
+  /// **'Add network'**
+  String get tailscaleAddNetwork;
+
+  /// No description provided for @tailscaleEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No Tailscale network'**
+  String get tailscaleEmptyTitle;
+
+  /// No description provided for @tailscaleEmptyDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Add a tailnet to route its traffic through the core. Each network signs in with its own account or auth key.'**
+  String get tailscaleEmptyDesc;
+
+  /// No description provided for @tailscaleNetworkName.
+  ///
+  /// In en, this message translates to:
+  /// **'Network name'**
+  String get tailscaleNetworkName;
+
+  /// No description provided for @tailscaleNameInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'The name cannot be empty'**
+  String get tailscaleNameInvalid;
+
+  /// No description provided for @tailscaleNameInUse.
+  ///
+  /// In en, this message translates to:
+  /// **'Another network already uses this name'**
+  String get tailscaleNameInUse;
+
+  /// No description provided for @tailscaleHostname.
+  ///
+  /// In en, this message translates to:
+  /// **'Device name'**
+  String get tailscaleHostname;
+
+  /// No description provided for @tailscaleHostnameInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Use letters, digits and hyphens only, and no hyphen at either end'**
+  String get tailscaleHostnameInvalid;
+
+  /// No description provided for @tailscaleControlUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'Control URL'**
+  String get tailscaleControlUrl;
+
+  /// No description provided for @tailscaleControlUrlHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Leave it empty for Tailscale. Headscale users enter their server URL.'**
+  String get tailscaleControlUrlHint;
+
+  /// No description provided for @tailscaleControlUrlInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter an http or https URL'**
+  String get tailscaleControlUrlInvalid;
+
+  /// No description provided for @tailscaleLoginMethod.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign-in method'**
+  String get tailscaleLoginMethod;
+
+  /// No description provided for @tailscaleAuthKey.
+  ///
+  /// In en, this message translates to:
+  /// **'Auth key'**
+  String get tailscaleAuthKey;
+
+  /// No description provided for @tailscaleInteractiveLogin.
+  ///
+  /// In en, this message translates to:
+  /// **'Browser sign-in'**
+  String get tailscaleInteractiveLogin;
+
+  /// No description provided for @tailscaleEnterAuthKey.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter an auth key'**
+  String get tailscaleEnterAuthKey;
+
+  /// No description provided for @tailscaleAuthKeyInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'The auth key was refused'**
+  String get tailscaleAuthKeyInvalid;
+
+  /// No description provided for @tailscaleAuthKeySaved.
+  ///
+  /// In en, this message translates to:
+  /// **'A key is saved'**
+  String get tailscaleAuthKeySaved;
+
+  /// No description provided for @tailscaleKeyExpired.
+  ///
+  /// In en, this message translates to:
+  /// **'Auth keys expire. Enter a new one to sign in again.'**
+  String get tailscaleKeyExpired;
+
+  /// No description provided for @tailscaleLoginHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Browser sign-in opens the Tailscale login page. An auth key signs in without leaving the app.'**
+  String get tailscaleLoginHint;
+
+  /// No description provided for @tailscaleLoginFooter.
+  ///
+  /// In en, this message translates to:
+  /// **'The auth key and the device identity stay on this device and are not included in a backup.'**
+  String get tailscaleLoginFooter;
+
+  /// No description provided for @tailscaleLoginWaiting.
+  ///
+  /// In en, this message translates to:
+  /// **'Waiting for sign-in to finish'**
+  String get tailscaleLoginWaiting;
+
+  /// No description provided for @tailscaleLoginTimeout.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign-in did not finish. Open the page again.'**
+  String get tailscaleLoginTimeout;
+
+  /// No description provided for @tailscaleOpenLoginPage.
+  ///
+  /// In en, this message translates to:
+  /// **'Open login page'**
+  String get tailscaleOpenLoginPage;
+
+  /// No description provided for @tailscaleSigningIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Signing in'**
+  String get tailscaleSigningIn;
+
+  /// No description provided for @tailscaleStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Status'**
+  String get tailscaleStatus;
+
+  /// No description provided for @tailscaleConnection.
+  ///
+  /// In en, this message translates to:
+  /// **'Connection'**
+  String get tailscaleConnection;
+
+  /// No description provided for @tailscaleConnected.
+  ///
+  /// In en, this message translates to:
+  /// **'Connected'**
+  String get tailscaleConnected;
+
+  /// No description provided for @tailscaleConnecting.
+  ///
+  /// In en, this message translates to:
+  /// **'Connecting'**
+  String get tailscaleConnecting;
+
+  /// No description provided for @tailscaleStopped.
+  ///
+  /// In en, this message translates to:
+  /// **'Stopped'**
+  String get tailscaleStopped;
+
+  /// No description provided for @tailscaleNeedsLogin.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign-in needed'**
+  String get tailscaleNeedsLogin;
+
+  /// No description provided for @tailscaleNeedsApproval.
+  ///
+  /// In en, this message translates to:
+  /// **'Approval needed'**
+  String get tailscaleNeedsApproval;
+
+  /// No description provided for @tailscaleOffline.
+  ///
+  /// In en, this message translates to:
+  /// **'Offline'**
+  String get tailscaleOffline;
+
+  /// No description provided for @tailscaleOnline.
+  ///
+  /// In en, this message translates to:
+  /// **'Online'**
+  String get tailscaleOnline;
+
+  /// No description provided for @tailscaleNotApplied.
+  ///
+  /// In en, this message translates to:
+  /// **'Not applied'**
+  String get tailscaleNotApplied;
+
+  /// No description provided for @tailscaleUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Unavailable'**
+  String get tailscaleUnavailable;
+
+  /// No description provided for @tailscaleUnavailableHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Tailscale becomes available once the core is running'**
+  String get tailscaleUnavailableHint;
+
+  /// No description provided for @tailscaleThisDevice.
+  ///
+  /// In en, this message translates to:
+  /// **'This device'**
+  String get tailscaleThisDevice;
+
+  /// No description provided for @tailscaleAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get tailscaleAccount;
+
+  /// No description provided for @tailscaleTailnet.
+  ///
+  /// In en, this message translates to:
+  /// **'Tailnet'**
+  String get tailscaleTailnet;
+
+  /// No description provided for @tailscaleDevices.
+  ///
+  /// In en, this message translates to:
+  /// **'Devices'**
+  String get tailscaleDevices;
+
+  /// No description provided for @tailscaleDirect.
+  ///
+  /// In en, this message translates to:
+  /// **'Direct'**
+  String get tailscaleDirect;
+
+  /// No description provided for @tailscaleRelay.
+  ///
+  /// In en, this message translates to:
+  /// **'Relay'**
+  String get tailscaleRelay;
+
+  /// No description provided for @tailscaleExitNode.
+  ///
+  /// In en, this message translates to:
+  /// **'Exit node'**
+  String get tailscaleExitNode;
+
+  /// No description provided for @tailscaleExitNodeNone.
+  ///
+  /// In en, this message translates to:
+  /// **'None'**
+  String get tailscaleExitNodeNone;
+
+  /// No description provided for @tailscaleExitNodeAuto.
+  ///
+  /// In en, this message translates to:
+  /// **'Automatic'**
+  String get tailscaleExitNodeAuto;
+
+  /// No description provided for @tailscaleExitNodeHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Traffic into the tailnet leaves through the exit node. Automatic follows whichever node the tailnet suggests.'**
+  String get tailscaleExitNodeHint;
+
+  /// No description provided for @tailscaleAcceptRoutes.
+  ///
+  /// In en, this message translates to:
+  /// **'Accept subnet routes'**
+  String get tailscaleAcceptRoutes;
+
+  /// No description provided for @tailscaleAutoRouteDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Also send the subnets that other devices advertise through this network.'**
+  String get tailscaleAutoRouteDesc;
+
+  /// No description provided for @tailscaleExitNodeAllowLan.
+  ///
+  /// In en, this message translates to:
+  /// **'Exit node access to the local network'**
+  String get tailscaleExitNodeAllowLan;
+
+  /// No description provided for @tailscaleSaveAndLogin.
+  ///
+  /// In en, this message translates to:
+  /// **'Save and sign in'**
+  String get tailscaleSaveAndLogin;
+
+  /// No description provided for @tailscaleLogout.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign out'**
+  String get tailscaleLogout;
+
+  /// No description provided for @tailscaleLogoutConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign out of this network? It stays configured, but its device identity and saved key are removed.'**
+  String get tailscaleLogoutConfirm;
+
+  /// No description provided for @tailscaleRemoveNetwork.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove network'**
+  String get tailscaleRemoveNetwork;
+
+  /// No description provided for @tailscaleRemoveConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove the network {name}? The app forgets its sign-in.'**
+  String tailscaleRemoveConfirm(Object name);
+
+  /// No description provided for @tailscaleCheckSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Check settings'**
+  String get tailscaleCheckSettings;
+
+  /// No description provided for @tailscaleAdvanced.
+  ///
+  /// In en, this message translates to:
+  /// **'Advanced'**
+  String get tailscaleAdvanced;
+
+  /// No description provided for @tailscaleGuide.
+  ///
+  /// In en, this message translates to:
+  /// **'Guide'**
+  String get tailscaleGuide;
+
+  /// No description provided for @tailscaleGuideGetStarted.
+  ///
+  /// In en, this message translates to:
+  /// **'Getting started'**
+  String get tailscaleGuideGetStarted;
+
+  /// No description provided for @tailscaleGuideGetStartedBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Create a tailnet in the Tailscale admin console or host Headscale yourself, then add a network here. While the core runs, that network\'s devices become an exit for the proxy.'**
+  String get tailscaleGuideGetStartedBody;
+
+  /// No description provided for @tailscaleGuideSignIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Signing in'**
+  String get tailscaleGuideSignIn;
+
+  /// No description provided for @tailscaleGuideSignInBody.
+  ///
+  /// In en, this message translates to:
+  /// **'An auth key suits unattended devices. Browser sign-in opens the login page and closes once it finishes. A device may need approval in the admin console the first time it joins.'**
+  String get tailscaleGuideSignInBody;
+
+  /// No description provided for @tailscaleGuideDevices.
+  ///
+  /// In en, this message translates to:
+  /// **'Devices and routes'**
+  String get tailscaleGuideDevices;
+
+  /// No description provided for @tailscaleGuideDevicesBody.
+  ///
+  /// In en, this message translates to:
+  /// **'The device list shows whether each device is online and connects directly or through a relay. With subnet routes accepted, subnets that other devices advertise are reached through this network too.'**
+  String get tailscaleGuideDevicesBody;
+
+  /// No description provided for @tailscaleGuideExitNodes.
+  ///
+  /// In en, this message translates to:
+  /// **'Exit nodes'**
+  String get tailscaleGuideExitNodes;
+
+  /// No description provided for @tailscaleGuideExitNodesBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Once an exit node is chosen, traffic into the tailnet leaves through it. To reach the network the exit node sits on, turn on the matching switch.'**
+  String get tailscaleGuideExitNodesBody;
+
+  /// No description provided for @tailscaleGuideTroubleshooting.
+  ///
+  /// In en, this message translates to:
+  /// **'Troubleshooting'**
+  String get tailscaleGuideTroubleshooting;
+
+  /// No description provided for @tailscaleGuideTroubleshootingBody.
+  ///
+  /// In en, this message translates to:
+  /// **'If the status stays at sign-in needed, check whether the auth key has expired or open the login page again. If it never connects, check the control URL and the network, and use check settings to see the current state.'**
+  String get tailscaleGuideTroubleshootingBody;
+
+  /// No description provided for @tailscaleCheckHealthy.
+  ///
+  /// In en, this message translates to:
+  /// **'The network answered in {delay} ms'**
+  String tailscaleCheckHealthy(Object delay);
+
+  /// No description provided for @tailscaleCheckNotApplied.
+  ///
+  /// In en, this message translates to:
+  /// **'This network is not running yet'**
+  String get tailscaleCheckNotApplied;
+
+  /// No description provided for @tailscaleCheckUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'The network could not be reached'**
+  String get tailscaleCheckUnavailable;
+
+  /// No description provided for @tailscaleCheckOffline.
+  ///
+  /// In en, this message translates to:
+  /// **'The network is connected but offline'**
+  String get tailscaleCheckOffline;
+
+  /// No description provided for @tailscaleCheckExitNodeUnset.
+  ///
+  /// In en, this message translates to:
+  /// **'No exit node is set'**
+  String get tailscaleCheckExitNodeUnset;
+
+  /// No description provided for @tailscaleCheckNeedsLogin.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in to this network first'**
+  String get tailscaleCheckNeedsLogin;
+
+  /// No description provided for @tailscaleCheckNeedsApproval.
+  ///
+  /// In en, this message translates to:
+  /// **'The device is waiting for approval in the admin console'**
+  String get tailscaleCheckNeedsApproval;
+
+  /// No description provided for @tailscaleCredentialsFooter.
+  ///
+  /// In en, this message translates to:
+  /// **'Each network signs in on its own. An auth key needs no browser; a device may need approval in the admin console before it joins a tailnet.'**
+  String get tailscaleCredentialsFooter;
 }
 
 class _AppLocalizationsDelegate

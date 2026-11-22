@@ -14,6 +14,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'config/advanced.dart';
+import 'config/tailscale.dart';
 import 'developer.dart';
 import 'disclaimer.dart';
 import 'theme.dart';
@@ -69,6 +70,7 @@ class _ToolViewState extends ConsumerState<ToolsView> {
         if (system.isDesktop) const _HotkeyItem(),
         if (system.isAndroid) const _AccessItem(),
         const _BackupItem(),
+        const _TailscaleItem(),
         const _AdvancedConfigItem(),
         const _GeneralItem(),
       ],
@@ -209,6 +211,19 @@ class _GeneralItem extends StatelessWidget {
       leading: const GlyphIcon(AppGlyphs.settings),
       title: Text(context.appLocalizations.general),
       widget: const GeneralView(),
+    );
+  }
+}
+
+class _TailscaleItem extends StatelessWidget {
+  const _TailscaleItem();
+
+  @override
+  Widget build(BuildContext context) {
+    return ListItem.open(
+      leading: const GlyphIcon(AppGlyphs.link),
+      title: Text(context.appLocalizations.tailscale),
+      widget: const TailscaleView(),
     );
   }
 }

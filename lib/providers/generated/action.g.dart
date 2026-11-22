@@ -40,7 +40,7 @@ final class CommonActionProvider extends $NotifierProvider<CommonAction, void> {
   }
 }
 
-String _$commonActionHash() => r'e0fa81e3fe2dc746ba741e144617cf4bf5380bf1';
+String _$commonActionHash() => r'd03f452f2bfd913e4c3eac574bd2dcddbb183794';
 
 abstract class _$CommonAction extends $Notifier<void> {
   void build();
@@ -193,7 +193,7 @@ final class CoreActionProvider extends $NotifierProvider<CoreAction, void> {
   }
 }
 
-String _$coreActionHash() => r'402f35753a76e704696838d1f907556c2fec6c1f';
+String _$coreActionHash() => r'9094ed70f182b4cba3b39b3f6b37367f746bbb9e';
 
 abstract class _$CoreAction extends $Notifier<void> {
   void build();
@@ -828,6 +828,58 @@ abstract class _$UpdatingAction extends $Notifier<void> {
             as $ClassProviderElement<
               AnyNotifier<void, void>,
               void,
+              Object?,
+              Object?
+            >;
+    return element.handleCreate(ref, build);
+  }
+}
+
+@ProviderFor(TailscaleAction)
+final tailscaleActionProvider = TailscaleActionProvider._();
+
+final class TailscaleActionProvider
+    extends $NotifierProvider<TailscaleAction, TailscaleData> {
+  TailscaleActionProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'tailscaleActionProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$tailscaleActionHash();
+
+  @$internal
+  @override
+  TailscaleAction create() => TailscaleAction();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(TailscaleData value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<TailscaleData>(value),
+    );
+  }
+}
+
+String _$tailscaleActionHash() => r'dd63aa7ab52097b776f51b0962744698efb2b91b';
+
+abstract class _$TailscaleAction extends $Notifier<TailscaleData> {
+  TailscaleData build();
+  @$mustCallSuper
+  @override
+  WhenComplete runBuild() {
+    final ref = this.ref as $Ref<TailscaleData, TailscaleData>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<TailscaleData, TailscaleData>,
+              TailscaleData,
               Object?,
               Object?
             >;

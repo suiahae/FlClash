@@ -4002,4 +4002,261 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get vpnServiceStartFailed => 'No se pudo iniciar el servicio VPN.';
+
+  @override
+  String get tailscale => 'Tailscale';
+
+  @override
+  String get tailscaleNetworks => 'Redes';
+
+  @override
+  String get tailscaleAddNetwork => 'Añadir red';
+
+  @override
+  String get tailscaleEmptyTitle => 'No hay ninguna red Tailscale';
+
+  @override
+  String get tailscaleEmptyDesc =>
+      'Añade un tailnet para enrutar su tráfico por el núcleo. Cada red inicia sesión con su propia cuenta o clave de autenticación.';
+
+  @override
+  String get tailscaleNetworkName => 'Nombre de la red';
+
+  @override
+  String get tailscaleNameInvalid => 'El nombre no puede estar vacío';
+
+  @override
+  String get tailscaleNameInUse => 'Otra red ya usa este nombre';
+
+  @override
+  String get tailscaleHostname => 'Nombre del dispositivo';
+
+  @override
+  String get tailscaleHostnameInvalid =>
+      'Usa solo letras, números y guiones, sin guiones en los extremos';
+
+  @override
+  String get tailscaleControlUrl => 'URL de control';
+
+  @override
+  String get tailscaleControlUrlHint =>
+      'Déjala vacía para Tailscale. Los usuarios de Headscale introducen la URL de su servidor.';
+
+  @override
+  String get tailscaleControlUrlInvalid => 'Introduce una URL http o https';
+
+  @override
+  String get tailscaleLoginMethod => 'Método de inicio de sesión';
+
+  @override
+  String get tailscaleAuthKey => 'Clave de autenticación';
+
+  @override
+  String get tailscaleInteractiveLogin => 'Inicio de sesión en el navegador';
+
+  @override
+  String get tailscaleEnterAuthKey => 'Introduce una clave de autenticación';
+
+  @override
+  String get tailscaleAuthKeyInvalid =>
+      'La clave de autenticación fue rechazada';
+
+  @override
+  String get tailscaleAuthKeySaved => 'Hay una clave guardada';
+
+  @override
+  String get tailscaleKeyExpired =>
+      'Las claves de autenticación caducan. Introduce una nueva para volver a iniciar sesión.';
+
+  @override
+  String get tailscaleLoginHint =>
+      'El inicio de sesión en el navegador abre la página de inicio de sesión de Tailscale. Con una clave de autenticación no hace falta salir de la aplicación.';
+
+  @override
+  String get tailscaleLoginFooter =>
+      'La clave de autenticación y la identidad del dispositivo se quedan en este dispositivo y no se incluyen en una copia de seguridad.';
+
+  @override
+  String get tailscaleLoginWaiting =>
+      'Esperando a que termine el inicio de sesión';
+
+  @override
+  String get tailscaleLoginTimeout =>
+      'El inicio de sesión no terminó. Abre la página de nuevo.';
+
+  @override
+  String get tailscaleOpenLoginPage => 'Abrir página de inicio de sesión';
+
+  @override
+  String get tailscaleSigningIn => 'Iniciando sesión';
+
+  @override
+  String get tailscaleStatus => 'Estado';
+
+  @override
+  String get tailscaleConnection => 'Conexión';
+
+  @override
+  String get tailscaleConnected => 'Conectado';
+
+  @override
+  String get tailscaleConnecting => 'Conectando';
+
+  @override
+  String get tailscaleStopped => 'Detenido';
+
+  @override
+  String get tailscaleNeedsLogin => 'Inicio de sesión necesario';
+
+  @override
+  String get tailscaleNeedsApproval => 'Aprobación necesaria';
+
+  @override
+  String get tailscaleOffline => 'Sin conexión';
+
+  @override
+  String get tailscaleOnline => 'En línea';
+
+  @override
+  String get tailscaleNotApplied => 'Sin aplicar';
+
+  @override
+  String get tailscaleUnavailable => 'No disponible';
+
+  @override
+  String get tailscaleUnavailableHint =>
+      'Tailscale estará disponible cuando el núcleo esté en marcha';
+
+  @override
+  String get tailscaleThisDevice => 'Este dispositivo';
+
+  @override
+  String get tailscaleAccount => 'Cuenta';
+
+  @override
+  String get tailscaleTailnet => 'tailnet';
+
+  @override
+  String get tailscaleDevices => 'Dispositivos';
+
+  @override
+  String get tailscaleDirect => 'Directo';
+
+  @override
+  String get tailscaleRelay => 'Retransmisión';
+
+  @override
+  String get tailscaleExitNode => 'Nodo de salida';
+
+  @override
+  String get tailscaleExitNodeNone => 'Ninguno';
+
+  @override
+  String get tailscaleExitNodeAuto => 'Automático';
+
+  @override
+  String get tailscaleExitNodeHint =>
+      'El tráfico hacia el tailnet sale por el nodo de salida. Automático elige el que propone el tailnet.';
+
+  @override
+  String get tailscaleAcceptRoutes => 'Aceptar rutas de subred';
+
+  @override
+  String get tailscaleAutoRouteDesc =>
+      'Enruta también por esta red las subredes anunciadas por otros dispositivos.';
+
+  @override
+  String get tailscaleExitNodeAllowLan =>
+      'Acceso del nodo de salida a la red local';
+
+  @override
+  String get tailscaleSaveAndLogin => 'Guardar e iniciar sesión';
+
+  @override
+  String get tailscaleLogout => 'Cerrar sesión';
+
+  @override
+  String get tailscaleLogoutConfirm =>
+      '¿Cerrar sesión en esta red? Se mantiene la configuración, pero se eliminan la identidad del dispositivo y la clave guardada.';
+
+  @override
+  String get tailscaleRemoveNetwork => 'Eliminar red';
+
+  @override
+  String tailscaleRemoveConfirm(Object name) {
+    return '¿Eliminar la red $name? La aplicación olvidará su inicio de sesión.';
+  }
+
+  @override
+  String get tailscaleCheckSettings => 'Comprobar ajustes';
+
+  @override
+  String get tailscaleAdvanced => 'Avanzado';
+
+  @override
+  String get tailscaleGuide => 'Guía';
+
+  @override
+  String get tailscaleGuideGetStarted => 'Primeros pasos';
+
+  @override
+  String get tailscaleGuideGetStartedBody =>
+      'Crea un tailnet en la consola de Tailscale u hospeda Headscale y añade aquí una red. Con el núcleo en marcha, los dispositivos de esa red sirven de salida del proxy.';
+
+  @override
+  String get tailscaleGuideSignIn => 'Inicio de sesión';
+
+  @override
+  String get tailscaleGuideSignInBody =>
+      'Una clave de autenticación sirve para dispositivos desatendidos. El inicio de sesión en el navegador abre la página y se cierra al terminar. La primera vez que se une, el dispositivo puede necesitar aprobación en la consola.';
+
+  @override
+  String get tailscaleGuideDevices => 'Dispositivos y rutas';
+
+  @override
+  String get tailscaleGuideDevicesBody =>
+      'La lista muestra el estado en línea y la conexión directa o por retransmisión. Al aceptar rutas de subred, las subredes anunciadas por otros dispositivos también se alcanzan por esta red.';
+
+  @override
+  String get tailscaleGuideExitNodes => 'Nodos de salida';
+
+  @override
+  String get tailscaleGuideExitNodesBody =>
+      'Al elegir un nodo de salida, el tráfico hacia el tailnet sale por él. Para llegar a la red local del nodo, activa el interruptor correspondiente.';
+
+  @override
+  String get tailscaleGuideTroubleshooting => 'Solución de problemas';
+
+  @override
+  String get tailscaleGuideTroubleshootingBody =>
+      'Si el estado sigue en «Inicio de sesión necesario», comprueba la caducidad de la clave o vuelve a abrir la página. Si no conecta, revisa la URL de control y la red; «Comprobar ajustes» muestra el estado actual.';
+
+  @override
+  String tailscaleCheckHealthy(Object delay) {
+    return 'La red respondió en $delay ms';
+  }
+
+  @override
+  String get tailscaleCheckNotApplied => 'Esta red aún no está en marcha';
+
+  @override
+  String get tailscaleCheckUnavailable => 'No se pudo alcanzar la red';
+
+  @override
+  String get tailscaleCheckOffline => 'La red está conectada pero sin conexión';
+
+  @override
+  String get tailscaleCheckExitNodeUnset =>
+      'No se ha elegido ningún nodo de salida';
+
+  @override
+  String get tailscaleCheckNeedsLogin => 'Inicia sesión primero en esta red';
+
+  @override
+  String get tailscaleCheckNeedsApproval =>
+      'El dispositivo espera aprobación en la consola';
+
+  @override
+  String get tailscaleCredentialsFooter =>
+      'Cada red inicia sesión por separado. Una clave de autenticación no necesita navegador; el dispositivo puede necesitar aprobación en la consola antes de unirse por primera vez.';
 }

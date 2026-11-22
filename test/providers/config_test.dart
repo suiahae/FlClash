@@ -249,7 +249,7 @@ void main() {
     test('produces correct overrides', () {
       const config = Config(themeProps: ThemeProps(), currentProfileId: 7);
       final overrides = buildConfigOverrides(config);
-      expect(overrides.length, 11);
+      expect(overrides.length, 12);
 
       final overrideContainer = ProviderContainer(overrides: overrides);
       addTearDown(overrideContainer.dispose);
@@ -260,6 +260,10 @@ void main() {
         config.patchClashConfig,
       );
       expect(overrideContainer.read(excludeSSIDsProvider), config.excludeSSIDs);
+      expect(
+        overrideContainer.read(tailscaleNetworksProvider),
+        config.tailscaleNetworks,
+      );
       expect(
         overrideContainer.read(appSettingProvider).onlyStatisticsProxy,
         false,

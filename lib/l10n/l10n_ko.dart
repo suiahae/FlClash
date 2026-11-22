@@ -3855,4 +3855,251 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get vpnServiceStartFailed => 'VPN 서비스를 시작하지 못했습니다.';
+
+  @override
+  String get tailscale => 'Tailscale';
+
+  @override
+  String get tailscaleNetworks => '네트워크';
+
+  @override
+  String get tailscaleAddNetwork => '네트워크 추가';
+
+  @override
+  String get tailscaleEmptyTitle => 'Tailscale 네트워크가 없습니다';
+
+  @override
+  String get tailscaleEmptyDesc =>
+      'tailnet을 추가하면 해당 트래픽이 코어를 통해 전달됩니다. 각 네트워크는 자체 계정이나 인증 키로 로그인합니다.';
+
+  @override
+  String get tailscaleNetworkName => '네트워크 이름';
+
+  @override
+  String get tailscaleNameInvalid => '이름은 비워 둘 수 없습니다';
+
+  @override
+  String get tailscaleNameInUse => '다른 네트워크에서 이미 이 이름을 사용합니다';
+
+  @override
+  String get tailscaleHostname => '기기 이름';
+
+  @override
+  String get tailscaleHostnameInvalid =>
+      '영문자, 숫자, 하이픈만 사용할 수 있으며 양 끝에 하이픈을 둘 수 없습니다';
+
+  @override
+  String get tailscaleControlUrl => '컨트롤 URL';
+
+  @override
+  String get tailscaleControlUrlHint =>
+      'Tailscale은 비워 두세요. Headscale 사용자는 서버 URL을 입력합니다.';
+
+  @override
+  String get tailscaleControlUrlInvalid => 'http 또는 https URL을 입력하세요';
+
+  @override
+  String get tailscaleLoginMethod => '로그인 방식';
+
+  @override
+  String get tailscaleAuthKey => '인증 키';
+
+  @override
+  String get tailscaleInteractiveLogin => '브라우저 로그인';
+
+  @override
+  String get tailscaleEnterAuthKey => '인증 키 입력';
+
+  @override
+  String get tailscaleAuthKeyInvalid => '인증 키가 거부되었습니다';
+
+  @override
+  String get tailscaleAuthKeySaved => '키가 저장되어 있습니다';
+
+  @override
+  String get tailscaleKeyExpired => '인증 키는 만료됩니다. 새 키를 입력해 다시 로그인하세요.';
+
+  @override
+  String get tailscaleLoginHint =>
+      '브라우저 로그인은 Tailscale 로그인 페이지를 엽니다. 인증 키를 사용하면 앱을 떠나지 않고 로그인할 수 있습니다.';
+
+  @override
+  String get tailscaleLoginFooter => '인증 키와 기기 ID는 이 기기에만 저장되며 백업에 포함되지 않습니다.';
+
+  @override
+  String get tailscaleLoginWaiting => '로그인 완료를 기다리는 중';
+
+  @override
+  String get tailscaleLoginTimeout => '로그인이 완료되지 않았습니다. 페이지를 다시 여세요.';
+
+  @override
+  String get tailscaleOpenLoginPage => '로그인 페이지 열기';
+
+  @override
+  String get tailscaleSigningIn => '로그인 중';
+
+  @override
+  String get tailscaleStatus => '상태';
+
+  @override
+  String get tailscaleConnection => '연결 상태';
+
+  @override
+  String get tailscaleConnected => '연결됨';
+
+  @override
+  String get tailscaleConnecting => '연결 중';
+
+  @override
+  String get tailscaleStopped => '중지됨';
+
+  @override
+  String get tailscaleNeedsLogin => '로그인 필요';
+
+  @override
+  String get tailscaleNeedsApproval => '승인 필요';
+
+  @override
+  String get tailscaleOffline => '오프라인';
+
+  @override
+  String get tailscaleOnline => '온라인';
+
+  @override
+  String get tailscaleNotApplied => '적용되지 않음';
+
+  @override
+  String get tailscaleUnavailable => '사용할 수 없음';
+
+  @override
+  String get tailscaleUnavailableHint => '코어가 실행 중일 때 Tailscale을 사용할 수 있습니다';
+
+  @override
+  String get tailscaleThisDevice => '이 기기';
+
+  @override
+  String get tailscaleAccount => '계정';
+
+  @override
+  String get tailscaleTailnet => 'tailnet';
+
+  @override
+  String get tailscaleDevices => '기기';
+
+  @override
+  String get tailscaleDirect => '직접 연결';
+
+  @override
+  String get tailscaleRelay => '릴레이';
+
+  @override
+  String get tailscaleExitNode => '출구 노드';
+
+  @override
+  String get tailscaleExitNodeNone => '없음';
+
+  @override
+  String get tailscaleExitNodeAuto => '자동';
+
+  @override
+  String get tailscaleExitNodeHint =>
+      'tailnet으로 향하는 트래픽은 출구 노드로 나갑니다. 자동은 tailnet이 권장하는 노드를 선택합니다.';
+
+  @override
+  String get tailscaleAcceptRoutes => '서브넷 라우트 수락';
+
+  @override
+  String get tailscaleAutoRouteDesc => '다른 기기가 알리는 서브넷 트래픽도 이 네트워크를 거치게 합니다.';
+
+  @override
+  String get tailscaleExitNodeAllowLan => '출구 노드의 로컬 네트워크 접근';
+
+  @override
+  String get tailscaleSaveAndLogin => '저장 후 로그인';
+
+  @override
+  String get tailscaleLogout => '로그아웃';
+
+  @override
+  String get tailscaleLogoutConfirm =>
+      '이 네트워크에서 로그아웃할까요? 설정은 유지되지만 기기 ID와 저장된 키는 삭제됩니다.';
+
+  @override
+  String get tailscaleRemoveNetwork => '네트워크 삭제';
+
+  @override
+  String tailscaleRemoveConfirm(Object name) {
+    return '$name 네트워크를 삭제할까요? 로그인 정보가 사라집니다.';
+  }
+
+  @override
+  String get tailscaleCheckSettings => '설정 확인';
+
+  @override
+  String get tailscaleAdvanced => '고급';
+
+  @override
+  String get tailscaleGuide => '안내';
+
+  @override
+  String get tailscaleGuideGetStarted => '시작하기';
+
+  @override
+  String get tailscaleGuideGetStartedBody =>
+      'Tailscale 관리 콘솔에서 tailnet을 만들거나 Headscale을 직접 운영한 뒤 여기에 네트워크를 추가하세요. 코어가 실행되면 이 네트워크의 기기가 프록시 출구가 됩니다.';
+
+  @override
+  String get tailscaleGuideSignIn => '로그인';
+
+  @override
+  String get tailscaleGuideSignInBody =>
+      '인증 키는 무인 기기에 적합합니다. 브라우저 로그인은 로그인 페이지를 열고 완료되면 자동으로 닫힙니다. 기기가 처음 참여할 때는 관리 콘솔에서 승인이 필요할 수 있습니다.';
+
+  @override
+  String get tailscaleGuideDevices => '기기와 라우트';
+
+  @override
+  String get tailscaleGuideDevicesBody =>
+      '기기 목록은 온라인 상태와 직접 연결 또는 릴레이 연결을 보여 줍니다. 서브넷 라우트를 수락하면 다른 기기가 알리는 서브넷도 이 네트워크를 통해 접근할 수 있습니다.';
+
+  @override
+  String get tailscaleGuideExitNodes => '출구 노드';
+
+  @override
+  String get tailscaleGuideExitNodesBody =>
+      '출구 노드를 선택하면 tailnet으로 향하는 트래픽이 그곳으로 나갑니다. 출구 노드의 LAN에 접근하려면 해당 스위치를 켜세요.';
+
+  @override
+  String get tailscaleGuideTroubleshooting => '문제 해결';
+
+  @override
+  String get tailscaleGuideTroubleshootingBody =>
+      '계속 \'로그인 필요\'에 머문다면 인증 키 만료를 확인하거나 로그인 페이지를 다시 여세요. 연결되지 않는다면 컨트롤 URL과 네트워크를 확인하고 \'설정 확인\'으로 현재 상태를 볼 수 있습니다.';
+
+  @override
+  String tailscaleCheckHealthy(Object delay) {
+    return '네트워크가 ${delay}ms 만에 응답했습니다';
+  }
+
+  @override
+  String get tailscaleCheckNotApplied => '이 네트워크는 아직 실행되지 않았습니다';
+
+  @override
+  String get tailscaleCheckUnavailable => '이 네트워크에 연결할 수 없습니다';
+
+  @override
+  String get tailscaleCheckOffline => '네트워크는 연결되었지만 오프라인입니다';
+
+  @override
+  String get tailscaleCheckExitNodeUnset => '출구 노드가 설정되지 않았습니다';
+
+  @override
+  String get tailscaleCheckNeedsLogin => '먼저 이 네트워크에 로그인하세요';
+
+  @override
+  String get tailscaleCheckNeedsApproval => '기기가 관리 콘솔의 승인을 기다리는 중입니다';
+
+  @override
+  String get tailscaleCredentialsFooter =>
+      '각 네트워크는 별도로 로그인합니다. 인증 키는 브라우저가 필요 없습니다. 기기가 처음 tailnet에 참여하기 전에 관리 콘솔에서 승인해야 할 수 있습니다.';
 }

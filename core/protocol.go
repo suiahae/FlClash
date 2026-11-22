@@ -72,6 +72,13 @@ const (
 	probeOutboundIPMethod CoreMethod = "probe.outboundIp"
 	probeServicesMethod   CoreMethod = "probe.services"
 
+	tailscaleApplyMethod  CoreMethod = "tailscale.apply"
+	tailscaleStatusMethod CoreMethod = "tailscale.status"
+	tailscaleLoginMethod  CoreMethod = "tailscale.login"
+	tailscaleLogoutMethod CoreMethod = "tailscale.logout"
+	tailscaleForgetMethod CoreMethod = "tailscale.forget"
+	tailscaleCheckMethod  CoreMethod = "tailscale.check"
+
 	mitmCertificateMethod         CoreMethod = "mitm.certificate"
 	mitmGenerateCertificateMethod CoreMethod = "mitm.generateCertificate"
 	mitmValidateMethod            CoreMethod = "mitm.validate"

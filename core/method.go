@@ -236,6 +236,13 @@ var methodHandlers = map[CoreMethod]methodHandler{
 
 	probeOutboundIPMethod: withArguments(handleOutboundIp),
 	probeServicesMethod:   withArguments(handleServiceCheck),
+
+	tailscaleApplyMethod:  command(handleApplyTailscale),
+	tailscaleStatusMethod: withoutArguments(handleGetTailscaleStatus),
+	tailscaleLoginMethod:  command(handleTailscaleLogin),
+	tailscaleLogoutMethod: command(handleTailscaleLogout),
+	tailscaleForgetMethod: command(handleForgetTailscale),
+	tailscaleCheckMethod:  withFallible(handleCheckTailscale),
 }
 
 func watchRouteHandler(call *MethodCall) (any, error) {
