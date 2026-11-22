@@ -95,7 +95,7 @@ class LinkManager {
     if (!protocolSchemes.contains(uri.scheme)) {
       return;
     }
-    commonPrint.log('onAppLink: $uri');
+    commonPrint.log('onAppLink: ${uri.scheme}://${uri.host}');
     final url = _installConfigUrl(uri);
     if (url != null) {
       installConfigCallBack(url);

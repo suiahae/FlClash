@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:fl_clash/common/link.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -40,6 +41,23 @@ void main() {
     await emit('flclash://install-config?url=https://example.com/a.yaml');
 
     expect(received, ['https://example.com/a.yaml']);
+  });
+
+  test('the logged link keeps the scheme and host but drops the url', () async {
+    final printed = <String>[];
+    final previousDebugPrint = debugPrint;
+    debugPrint = (String? message, {int? wrapWidth}) {
+      printed.add(message ?? '');
+    };
+    addTearDown(() => debugPrint = previousDebugPrint);
+
+    await listen();
+
+    await emit('flclash://install-config?url=https://example.com/a.yaml');
+
+    final log = printed.join('\n');
+    expect(log, contains('onAppLink: flclash://install-config'));
+    expect(log, isNot(contains('example.com')));
   });
 
   test('an install-config link without a url is ignored', () async {
