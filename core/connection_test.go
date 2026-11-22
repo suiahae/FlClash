@@ -59,7 +59,7 @@ func TestProxyOnlyTrafficLeavesOutADirectProxyOfAnyName(t *testing.T) {
 }
 
 type resettableOutbound struct {
-	constant.ProxyAdapter
+	outbound.ProxyAdapter
 	resets int
 }
 
@@ -68,7 +68,8 @@ func (o *resettableOutbound) ResetNetwork() { o.resets++ }
 func TestResetNetworkResetsOutboundsThatShareAConnection(t *testing.T) {
 	shared := &resettableOutbound{ProxyAdapter: outbound.NewRejectWithOption(outbound.RejectOption{Name: "WG"})}
 	tunnel.UpdateProxies(map[string]constant.Proxy{
-		"WG":     adapter.NewProxy(shared),
+		// ParseProxy wraps every outbound this way, so the reset has to unwrap.
+		"WG":     adapter.NewProxy(outbound.NewAutoCloseProxyAdapter(shared)),
 		"DIRECT": adapter.NewProxy(outbound.NewDirect()),
 	}, nil)
 	t.Cleanup(func() { tunnel.UpdateProxies(nil, nil) })
@@ -83,8 +84,10 @@ func TestResetNetworkResetsOutboundsThatShareAConnection(t *testing.T) {
 func TestResetNetworkResetsEveryProvidersNodeOfOneName(t *testing.T) {
 	first := &resettableOutbound{ProxyAdapter: outbound.NewRejectWithOption(outbound.RejectOption{Name: "WG"})}
 	second := &resettableOutbound{ProxyAdapter: outbound.NewRejectWithOption(outbound.RejectOption{Name: "WG"})}
-	providerOf := func(name string, outbound *resettableOutbound) cp.ProxyProvider {
-		proxies := []constant.Proxy{adapter.NewProxy(outbound)}
+	providerOf := func(name string, node *resettableOutbound) cp.ProxyProvider {
+		proxies := []constant.Proxy{
+			adapter.NewProxy(outbound.NewAutoCloseProxyAdapter(node)),
+		}
 		pd, err := provider.NewCompatibleProvider(name, proxies, provider.NewHealthCheck(proxies, "", 0, 0, true, nil))
 		if err != nil {
 			t.Fatal(err)

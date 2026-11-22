@@ -1,6 +1,7 @@
 package core
 
 import (
+	"github.com/metacubex/mihomo/adapter/outbound"
 	"github.com/metacubex/mihomo/component/resolver"
 	"github.com/metacubex/mihomo/constant"
 	"github.com/metacubex/mihomo/dns"
@@ -78,7 +79,9 @@ type networkResetter interface{ ResetNetwork() }
 func resetOutbounds() {
 	reset := make(map[networkResetter]struct{})
 	visit := func(proxy constant.Proxy) {
-		outbound, ok := proxy.Adapter().(networkResetter)
+		// A parsed proxy keeps its adapter behind the wrapper ParseProxy adds,
+		// so the reset has to look through it to reach the outbound's own type.
+		outbound, ok := outbound.UnwrapProxyAdapter(proxy.Adapter()).(networkResetter)
 		if !ok {
 			return
 		}
